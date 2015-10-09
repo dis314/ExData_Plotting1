@@ -1,7 +1,7 @@
 library(data.table)
 
 # reading only lines for 1 and 2 Feb 2007
-hpc <- fread("household_power_consumption.txt", skip = "1/2/2007", nrows = 2880, 
+hpc <- fread("household_power_consumption.txt", na.strings = "?", skip = "1/2/2007", nrows = 2880, 
              colClasses = c("POSIXlt", "character", rep("numeric", 7))) 
 
 # setting proper variable names
